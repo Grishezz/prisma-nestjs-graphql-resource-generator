@@ -1,0 +1,43 @@
+import { Injectable } from '@nestjs/common';
+import {
+  ResourceCreateInput,
+  ResourceUpdateInput,
+  ResourceWhereUniqueInput,
+  FindManyResourceArgs,
+} from '@prisma/client/nestjs-graphql';
+import { PrismaService } from '../../services/prisma/prisma.service';
+import { Prisma } from '.prisma/client';
+
+@Injectable()
+export class ResourceService {
+  constructor(private prisma: PrismaService) {}
+
+  // CRUD
+
+  create(createResourceInput: ResourceCreateInput) {
+    return this.prisma.reSource.create({ data: createResourceInput as Prisma.ResourceCreateInput });
+  }
+
+  findAll(args: FindManyResourceArgs) {
+    return this.prisma.reSource.findMany(args);
+  }
+
+  findOne(where: ResourceWhereUniqueInput) {
+    return this.prisma.reSource.findUnique({ where });
+  }
+
+  update(
+    where: ResourceWhereUniqueInput,
+    updateResourceInput: ResourceUpdateInput,
+  ) {
+    return this.prisma.reSource.update({ where, data: updateResourceInput as Prisma.ResourceUpdateInput });
+  }
+
+  remove(where: ResourceWhereUniqueInput) {
+    return this.prisma.reSource.delete({ where });
+  }
+
+  // ADMINLAND
+
+  // USERLAND
+}

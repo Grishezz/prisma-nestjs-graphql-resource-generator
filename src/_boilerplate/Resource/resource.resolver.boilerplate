@@ -1,0 +1,50 @@
+import { Args, Mutation, Query, Resolver, ResolveField, Parent } from '@nestjs/graphql';
+import {
+  Resource,
+  ResourceCreateInput,
+  ResourceUpdateInput,
+  ResourceWhereUniqueInput,
+  FindManyResourceArgs,
+} from '@prisma/client/nestjs-graphql';
+import { ResourceService } from './resource.service';
+
+@Resolver(() => Resource)
+export class ResourceResolver {
+  constructor(private readonly reSourceService: ResourceService) {}
+
+  // CRUD
+
+  @Mutation(() => Resource)
+  createResource(
+    @Args('createResourceInput') createResourceInput: ResourceCreateInput,
+  ) {
+    return this.reSourceService.create(createResourceInput);
+  }
+
+  @Query(() => [Resource], { name: 'reSources' })
+  findAll(@Args() args: FindManyResourceArgs) {
+    return this.reSourceService.findAll(args);
+  }
+
+  @Query(() => Resource, { name: 'reSource', nullable: true })
+  findOne(@Args('where') where: ResourceWhereUniqueInput) {
+    return this.reSourceService.findOne(where);
+  }
+
+  @Mutation(() => Resource)
+  updateResource(
+    @Args('where') where: ResourceWhereUniqueInput,
+    @Args('updateResourceInput') updateResourceInput: ResourceUpdateInput,
+  ) {
+    return this.reSourceService.update(where, updateResourceInput);
+  }
+
+  @Mutation(() => Resource)
+  removeResource(@Args('where') where: ResourceWhereUniqueInput) {
+    return this.reSourceService.remove(where);
+  }
+
+  // ADMINLAND
+
+  // USERLAND
+}
