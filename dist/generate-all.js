@@ -31,7 +31,7 @@ const prismaEntities = Object.entries(entities.definitions).map((e) => e[0]);
 const execPromise = util.promisify(child_process_1.exec);
 const ex = async () => {
     for (const entity of prismaEntities) {
-        await execPromise("npm run gm models/" + (0, camelcase_1.default)(entity));
+        await execPromise("npx gm models/" + (0, camelcase_1.default)(entity));
     }
 };
 ex();

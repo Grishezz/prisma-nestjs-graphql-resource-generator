@@ -20,7 +20,7 @@ const execPromise = util.promisify(exec);
 
 const ex = async () => {
   for (const entity of prismaEntities) {
-    await execPromise("npm run gm models/" + camelcase(entity));
+    await execPromise("npx gm models/" + camelcase(entity));
   }
 };
 

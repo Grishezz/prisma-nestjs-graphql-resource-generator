@@ -36,17 +36,12 @@ const resourcename = entityName.toLowerCase();
 const realPath = [...modulesDir, resourcename];
 const files = [
     {
-        src: [
-            "resource-generator",
-            "_boilerplate",
-            "resource",
-            "resource.module.boilerplate",
-        ],
+        src: [__dirname, "_boilerplate", "resource", "resource.module.boilerplate"],
         dst: ["src", ...paramPath, `${resourcename}.module.ts`],
     },
     {
         src: [
-            "resource-generator",
+            __dirname,
             "_boilerplate",
             "resource",
             "resource.resolver.boilerplate",
@@ -55,7 +50,7 @@ const files = [
     },
     {
         src: [
-            "resource-generator",
+            __dirname,
             "_boilerplate",
             "resource",
             "resource.service.boilerplate",
@@ -64,7 +59,7 @@ const files = [
     },
     {
         src: [
-            "resource-generator",
+            __dirname,
             "_boilerplate",
             "resource",
             "resource.service.spec.boilerplate",
@@ -73,7 +68,7 @@ const files = [
     },
     {
         src: [
-            "resource-generator",
+            __dirname,
             "_boilerplate",
             "resource",
             "resource.resolver.spec.boilerplate",

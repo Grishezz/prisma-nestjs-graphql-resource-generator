@@ -24,6 +24,6 @@
   },
   "bin": {
     "gm": "./cli/gm.js",
-    "gmall": "./cli/gm.js"
+    "gmall": "./cli/gmall.js"
   }
 }
