@@ -1,6 +1,6 @@
 {
   "name": "prisma-nestjs-graphql-resource-generator",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Generates crud resources (resolver,service,module,test-files) for a prisma, nestjs, graphql setup",
   "main": "index.js",
   "scripts": {
