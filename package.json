@@ -23,7 +23,7 @@
     "typescript": "^4.5.4"
   },
   "bin": {
-    "gm": "node ./cli/gm.js",
-    "gmall": "node ./cli/gm.js"
+    "gm": "./cli/gm.js",
+    "gmall": "./cli/gm.js"
   }
 }
