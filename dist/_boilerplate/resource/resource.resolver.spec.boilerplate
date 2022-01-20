@@ -1,6 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { ResourceResolver } from './resource.resolver';
 import { ResourceService } from './resource.service';
+import { PrismaModule } from '../../services/prisma/prisma.module';
+
 
 describe('ResourceResolver', () => {
   let resolver: ResourceResolver;
@@ -8,6 +10,7 @@ describe('ResourceResolver', () => {
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [ResourceResolver, ResourceService],
+      imports: [PrismaModule],
     }).compile();
 
     resolver = module.get<ResourceResolver>(ResourceResolver);
