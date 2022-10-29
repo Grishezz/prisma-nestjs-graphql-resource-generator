@@ -10,10 +10,7 @@
   "author": "Thomas Moser",
   "license": "MIT",
   "dependencies": {
-    "@types/node": "^17.0.9",
     "camelcase": "^6.3.0",
-    "fs": "^0.0.1-security",
-    "node": "^17.3.1",
     "prettier": "^2.5.1",
     "ts-node": "^10.4.0",
     "yargs": "^17.3.1"
