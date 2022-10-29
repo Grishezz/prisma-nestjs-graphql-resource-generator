@@ -15,7 +15,7 @@ export class ResourceService {
   // CRUD
 
   create(createResourceInput: ResourceCreateInput) {
-    return this.prisma.reSource.create({ data: createResourceInput as Prisma.ResourceCreateInput });
+    return this.prisma.reSource.create({ data: createResourceInput });
   }
 
   findAll(args: FindManyResourceArgs) {
@@ -30,7 +30,7 @@ export class ResourceService {
     where: ResourceWhereUniqueInput,
     updateResourceInput: ResourceUpdateInput,
   ) {
-    return this.prisma.reSource.update({ where, data: updateResourceInput as Prisma.ResourceUpdateInput });
+    return this.prisma.reSource.update({ where, data: updateResourceInput });
   }
 
   remove(where: ResourceWhereUniqueInput) {
