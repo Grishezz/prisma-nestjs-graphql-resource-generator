@@ -4,7 +4,7 @@ import {
   ResourceUpdateInput,
   ResourceWhereUniqueInput,
   FindManyResourceArgs,
-} from '@prisma/client/nestjs-graphql';
+} from '../../generated';
 import { PrismaService } from '../../services/prisma/prisma.service';
 import { Prisma } from '.prisma/client';
 

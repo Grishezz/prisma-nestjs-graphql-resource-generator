@@ -3,7 +3,6 @@ import { ResourceResolver } from './resource.resolver';
 import { ResourceService } from './resource.service';
 import { PrismaModule } from '../../services/prisma/prisma.module';
 
-
 describe('ResourceResolver', () => {
   let resolver: ResourceResolver;
 
