@@ -5,7 +5,7 @@ import {
   ResourceUpdateInput,
   ResourceWhereUniqueInput,
   FindManyResourceArgs,
-} from '../../generated';
+} from '../../../prisma/generated';
 import { ResourceService } from './resource.service';
 
 @Resolver(() => Resource)

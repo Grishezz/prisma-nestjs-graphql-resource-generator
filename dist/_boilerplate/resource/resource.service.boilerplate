@@ -4,7 +4,7 @@ import {
   ResourceUpdateInput,
   ResourceWhereUniqueInput,
   FindManyResourceArgs,
-} from '../../generated';
+} from '../../../prisma/generated';
 import { PrismaService } from '../../services/prisma/prisma.service';
 import { Prisma } from '.prisma/client';
 
